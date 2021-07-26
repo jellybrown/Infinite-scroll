@@ -1,5 +1,12 @@
+import "./App.css";
+import Comments from "./components/Comments";
+
 function App() {
-  return <h1>App</h1>;
+  return (
+    <div>
+      <Comments />
+    </div>
+  );
 }
 
 export default App;
