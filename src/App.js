@@ -2,6 +2,18 @@ import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 import Comments from "./components/Comments";
 import axios from "axios";
+import styled from "styled-components";
+
+const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 33px;
+
+  div {
+    margin-bottom: 14px;
+  }
+`;
 
 function App() {
   const [page, setPage] = useState(1);
@@ -51,23 +63,21 @@ function App() {
   }, [element]);
 
   return (
-    <div>
-      <div>
-        {list &&
-          list.map((comment, index) => {
-            return (
-              <div ref={setElement} key={index}>
-                <Comments
-                  postId={comment.postId}
-                  email={comment.email}
-                  name={comment.name}
-                  body={comment.body}
-                />
-              </div>
-            );
-          })}
-      </div>
-    </div>
+    <Wrapper>
+      {list &&
+        list.map((comment, index) => {
+          return (
+            <div ref={setElement} key={index}>
+              <Comments
+                postId={comment.postId}
+                email={comment.email}
+                name={comment.name}
+                body={comment.body}
+              />
+            </div>
+          );
+        })}
+    </Wrapper>
   );
 }
 

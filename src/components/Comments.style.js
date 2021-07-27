@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const CommentWrapper = styled.div`
-  height: 213px;
   width: 500px;
   border-radius: 20px;
   background: #f8f9fa;
