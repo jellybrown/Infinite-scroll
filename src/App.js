@@ -34,7 +34,6 @@ function App() {
     new IntersectionObserver(
       (entries) => {
         const first = entries[0];
-        console.log(first);
         if (first.isIntersecting) {
           setPage((prev) => prev + 1);
         }
