@@ -1,12 +1,12 @@
 import React from "react";
 import { CommentWrapper, RowInfo, Title } from "./Comments.style";
 
-const Comments = ({ postId, email, name, body }) => {
+const Comments = ({ id, email, body }) => {
   return (
     <CommentWrapper>
       <RowInfo>
         <Title>Comment Id</Title>
-        <span>{postId}</span>
+        <span>{id}</span>
       </RowInfo>
       <RowInfo>
         <Title>Email</Title>

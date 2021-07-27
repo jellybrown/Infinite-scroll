@@ -68,9 +68,8 @@ function App() {
           return (
             <div ref={setElement} key={index}>
               <Comments
-                postId={comment.postId}
+                id={comment.id}
                 email={comment.email}
-                name={comment.name}
                 body={comment.body}
               />
             </div>
